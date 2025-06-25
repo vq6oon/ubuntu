@@ -3,11 +3,10 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "settings": {
-    "terminal.integrated.defaultProfile.linux": "bash",
-    "editor.formatOnSave": true
-  },
   "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    },
     "ghcr.io/devcontainers/features/node:1": {
       "version": "20"
     },
@@ -19,7 +18,11 @@
     },
     "ghcr.io/devcontainers/features/git:1": {}
   },
-  "postCreateCommand": "echo '✅ Environment is ready!'",
+  "forwardPorts": [22],
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "editor.formatOnSave": true
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -30,5 +33,6 @@
       ]
     }
   },
+  "postCreateCommand": "echo '✅ Debian DevContainer siap digunakan!'",
   "remoteUser": "root"
 }
