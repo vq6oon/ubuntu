@@ -1,0 +1,9 @@
+{
+  "name": "Debian Dev Env",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  }
+}
